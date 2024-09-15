@@ -1,0 +1,56 @@
+/*Slider 1*/
+.slide-in-fwd-bottom {
+    -webkit-animation: slide-in-fwd-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.3s both;
+    animation: slide-in-fwd-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.3s both;
+}
+.bounce-in-left {
+    -webkit-animation: bounce-in-left 1.5s 0.4s both;
+    animation: bounce-in-left 1.5s 0.4s both;
+}
+.tilt-in-top-2 {
+    -webkit-animation: tilt-in-top-2 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.6s both;
+    animation: tilt-in-top-2 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.6s both;
+}
+.slide-in-bottom {
+    -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/*Slider 2*/
+.scale-in-right {
+    -webkit-animation: scale-in-right 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-in-right 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-in-bck-bottom {
+    -webkit-animation: slide-in-bck-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+    animation: slide-in-bck-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+}
+.slide-in-bck-bottom-2 {
+    -webkit-animation: slide-in-bck-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.4s both;
+    animation: slide-in-bck-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.4s both;
+}
+.slide-in-bck-bottom-3 {
+    -webkit-animation: slide-in-bck-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.6s both;
+    animation: slide-in-bck-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.6s both;
+}
+.slide-in-elliptic-right-fwd {
+    -webkit-animation: slide-in-elliptic-right-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.8s both;
+    animation: slide-in-elliptic-right-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.8s both;
+}
+.fade-in-right {
+    -webkit-animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
+    animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
+}
+
+/*About*/
+.about-content-phone {
+    -webkit-animation: slide-in-bck-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+    animation: slide-in-bck-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+}
+.about-content-person {
+    -webkit-animation: slide-in-blurred-left 0.9s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.2s both;
+    animation: slide-in-blurred-left 0.9s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.2s both;
+}
+.about-content-market{-webkit-animation:fade-in-top 1s cubic-bezier(.39,.575,.565,1.000) 1.6s both;animation:fade-in-top 1s cubic-bezier(.39,.575,.565,1.000) 1.6s both}
+

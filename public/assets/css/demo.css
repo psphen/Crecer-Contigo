@@ -1,0 +1,257 @@
+/*
+* demo.css
+* File include item demo only specific css only
+******************************************************************************/
+
+.light-style .menu .app-brand.demo {
+  height: 64px;
+}
+
+.dark-style .menu .app-brand.demo {
+  height: 64px;
+}
+
+.app-brand-logo.demo {
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -ms-flexbox;
+  display: flex;
+  width: 34px;
+  height: 24px;
+}
+
+.app-brand-logo.demo svg {
+  width: 35px;
+  height: 24px;
+}
+
+.app-brand-text.demo {
+  font-size: 1.375rem;
+}
+
+/* ! For .layout-navbar-fixed added fix padding top tpo .layout-page */
+.layout-navbar-fixed .layout-wrapper:not(.layout-without-menu) .layout-page {
+  padding-top: 64px !important;
+}
+.layout-navbar-fixed .layout-wrapper:not(.layout-horizontal):not(.layout-without-menu) .layout-page {
+  padding-top: 78px !important;
+}
+/* Navbar page z-index issue solution */
+.content-wrapper .navbar {
+  z-index: auto;
+}
+
+/*
+* Content
+******************************************************************************/
+
+.demo-blocks > * {
+  display: block !important;
+}
+
+.demo-inline-spacing > * {
+  margin: 1rem 0.375rem 0 0 !important;
+}
+
+/* ? .demo-vertical-spacing class is used to have vertical margins between elements. To remove margin-top from the first-child, use .demo-only-element class with .demo-vertical-spacing class. For example, we have used this class in forms-input-groups.html file. */
+.demo-vertical-spacing > * {
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
+}
+.demo-vertical-spacing.demo-only-element > :first-child {
+  margin-top: 0 !important;
+}
+
+.demo-vertical-spacing-lg > * {
+  margin-top: 1.875rem !important;
+  margin-bottom: 0 !important;
+}
+.demo-vertical-spacing-lg.demo-only-element > :first-child {
+  margin-top: 0 !important;
+}
+
+.demo-vertical-spacing-xl > * {
+  margin-top: 5rem !important;
+  margin-bottom: 0 !important;
+}
+.demo-vertical-spacing-xl.demo-only-element > :first-child {
+  margin-top: 0 !important;
+}
+
+.rtl-only {
+  display: none !important;
+  text-align: left !important;
+  direction: ltr !important;
+}
+
+[dir='rtl'] .rtl-only {
+  display: block !important;
+}
+
+/*
+* Layout demo
+******************************************************************************/
+
+.layout-demo-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.layout-demo-placeholder img {
+  width: 900px;
+}
+.layout-demo-info {
+  text-align: center;
+  margin-top: 1rem;
+}
+/*aside#layout-menu {*/
+/*    z-index: 9999;*/
+/*}*/
+.image-upload .thumb .profilePicPreview {
+    width: 100%;
+    height: 100%;
+    max-height: 250px;
+    min-height: 250px;
+    display: flex;
+    border: 3px solid #f1f1f1;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+    background-size: contain !important;
+    background-position: top !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+    background-color: rgb(0 0 0 / 15%) !important;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.image-upload .thumb .profilePicPreview .image-empty{
+    background-color: rgb(0 0 0 / 15%);
+}
+.image-upload .thumb .profilePicPreview.logoPicPrev {
+    background-size: contain !important;
+    background-position: center;
+}
+
+.image-upload .thumb .profilePicUpload {
+    font-size: 0;
+    opacity: 0;
+}
+.avatar-edit{
+    position: relative;
+    margin-top: -18px;
+}
+.image-upload .thumb .avatar-edit label {
+    text-align: center;
+    background: #6cb500;
+    color: #fff;
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 0px;*/
+    line-height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 2px 25px;
+    width: 100%;
+    border-radius:10px;
+    transition: all 0.3s;
+}
+
+.image-upload .thumb .avatar-edit label:hover {
+    transform: translateY(-3px);
+}
+
+.image-upload .thumb .profilePicPreview .remove-image {
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    text-align: center;
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+    border-radius: 50%;
+    background-color: #df1c1c;
+    color: #fff;
+    display: none;
+}
+
+.image-upload .thumb .profilePicPreview.has-image .remove-image {
+    display: block;
+}
+.dark-style .app-brand a img.light-logo{
+    display:none;
+}
+.light-style .app-brand a img.dark-logo{
+    display:none;
+}
+button.swal2-deny.btn.btn-label-secondary {
+    display: none !important;
+}
+button.swal2-cancel.btn.btn-label-danger {
+    display: none !important;
+}
+/* width */
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+/* Track */
+*::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+/* Handle */
+*::-webkit-scrollbar-thumb {
+    background: #6cb500;
+}
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: #6cb500;
+}
+#template-customizer .template-customizer-open-btn{
+    display:none !important;
+}
+.lg\:h-48 {
+    /*height: auto !important;*/
+    min-height: 11rem;
+}
+.flex-1.h-12.border.-mt-px.-ml-px.flex.items-center.justify-center.bg-indigo-100.text-gray-900 {
+    background-color: #e9e7fd;
+}
+.w-full.h-full.p-2.bg-gray-100.flex.flex-col {
+    background-color: #eae8fd63;
+}
+.w-full.h-full.p-2.bg-yellow-100.flex.flex-col {
+    background-color: #eae8fd;
+}
+
+ .pac-container {
+     z-index: 10000 !important;
+ }
+.pagination{
+    justify-content: center;
+}
+tags{
+    width:100%;
+}
+.text-xs {
+    display: none;
+}
+.btn-icon {
+    color: inherit !important;
+}
+.btn-remove-image{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}

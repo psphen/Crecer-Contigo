@@ -1,0 +1,6 @@
+@extends('frontend.layouts.app')
+@section('title', __('Profile'))
+@section('content')
+    <link rel="stylesheet" href="{{asset('assets/vendor/css/pages/page-profile.css')}}">
+    <livewire:frontend.profile :userSlug="$user->slug" :userId="$user->id" />
+@endsection

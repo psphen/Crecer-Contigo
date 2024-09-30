@@ -1,21 +1,21 @@
-<div id="agro-slider" class="agro-slider carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-caption d-none d-md-block zindex-1">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <h1>PSICOLOGÍA & BIENESTAR</h1>
-                </div>
-                <div class="col-md-2"></div>
-            </div>
+<div class="container py-5">
+    <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+            <h1 class="display-4 fw-bold" style="font-size: 3rem !important;">
+                CRECER <br> CONTIGO
+            </h1>
+            <p class="lead">Ayudamos a las personas y sus familias a ser felices. ¡Mereces una vida perfecta! ¡Puedo cambiar tu vida ahora mismo!</p>
+            <a href="#contact" class="btn btn-new btn-lg px-4">Contáctame</a>
         </div>
-        <div class="carousel-item active item-1">
-            <img src="{{asset('crecer-contigo/banner-arboles.jpg')}}" alt="slider-1" class="d-block w-100" style="object-fit: cover; height: 439px;">
+        <div class="col-md-6 d-flex flex-column align-items-center">
+            <div class="mb-4 text-end">
+                <img src="{{asset('crecer-contigo/lina-junta-2.jpg')}}" alt="imagen psicólogo" class="img-fluid rounded" style="max-width: 70%; border-radius: 1.5rem !important;">
+            </div>
         </div>
     </div>
 </div>
 <div id="agro-slider-mobile" class="agro-slider-mobile carousel slide" data-bs-ride="carousel">
-    <img src="{{asset('crecer-contigo/banner-arboles.jpg')}}" class="d-block w-100" alt="...">
+    <img src="{{asset('crecer-contigo/lina-junta-2.jpg')}}" class="d-block w-100" alt="...">
 </div>
 <script>
 {{--    Slider 1--}}

@@ -5,7 +5,7 @@
     <div class="container py-5">
         <div class="vision row d-flex justify-content-center align-items-center">
             <div class="col-md-7 d-flex justify-content-center align-items-center position-relative">
-                <img src="{{asset('crecer-contigo/vision.jpg')}}" alt="...">
+                <img src="{{ asset('crecer-contigo/lina-junta.jpg') }}" alt="Crecer Contigo" class="img-fluid" style="max-width: 60% !important; border-radius: 1.5rem;">
                 {{--<img src="{{asset('frontend/img/about-us/vision/form.webp')}}" class="d-block form" alt="...">
                 <img src="{{asset('frontend/img/about-us/vision/person.webp')}}" class="person" alt="...">--}}
             </div>
@@ -32,8 +32,8 @@
         </div>
         <div class="vision row d-flex justify-content-center align-items-center">
             <div class="col-md-7 d-flex justify-content-center align-items-center position-relative">
-                <img src="{{asset('crecer-contigo/LOGO LIGHT 2.png')}}" alt="..." style="width: 76%; border-radius: 1.5rem;">
-                {{--<img src="{{asset('frontend/img/about-us/vision/form.webp')}}" class="d-block form" alt="...">
+            <img src="{{ asset('crecer-contigo/lina-junta-2.jpg') }}" alt="Crecer Contigo" class="img-fluid" style="max-width: 60% !important; border-radius: 1.5rem;">
+            {{--<img src="{{asset('frontend/img/about-us/vision/form.webp')}}" class="d-block form" alt="...">
                 <img src="{{asset('frontend/img/about-us/vision/person.webp')}}" class="person" alt="...">--}}
             </div>
             <div class="col-md-5">

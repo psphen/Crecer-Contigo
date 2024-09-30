@@ -1,105 +1,70 @@
-<div class="container" style="padding-bottom: 7rem; padding-top: 3.5rem; padding-left: 7rem;padding-right: 7rem;">
+<div class="container-service">
     <div class="container py-5">
         <div class="row text-center">
             <div class="col-md-12">
-                <h2>Lo que podemos ofrecerte</h2>
+                <h2 class="mb-0 text-white">Nuestros Servicios</h2>
             </div>
         </div>
     </div>
-    <div class="d-flex justify-content-center align-items-center">
-        <div class="col-md-3 text-center">
-            <img src="{{asset('crecer-contigo/servicio-1.jpg')}}" style="width: 80px; height: 80px; border-radius: 50%;">
-            <div class="d-flex justify-content-center align-items-center">
-                <div class="col-12 px-1 py-2">
-                    <div class="text-center">
-                        <h6 class="title text-dark">Convivencias escolares</h6>
-                    </div>
-                </div>
+
+    <div class="row">
+        <!-- Primer servicio -->
+        <div class="col-md-4 text-center h-100">
+            <div class="service-box p-3 mb-4">
+                <img src="{{ asset('crecer-contigo/servicio-1.jpg') }}" style="width: 80px; height: 80px; border-radius: 50%;">
+                <h6 class="title mt-3">Convivencias escolares</h6>
+                <p>Puedes acceder a este servicio para mejorar la convivencia escolar.</p>
             </div>
         </div>
-        <div class="col-md-3 text-center">
-            <img src="{{asset('crecer-contigo/servicio-2.jpg')}}" style="width: 80px; height: 80px; border-radius: 50%;">
-            <div class="d-flex justify-content-center align-items-center">
-                <div class="col-12 px-1 py-2">
-                    <div class="text-center">
-                        <h6 class="title text-dark">Acompañamiento Psicológico</h6>
-                    </div>
-                </div>
+        <!-- Segundo servicio -->
+        <div class="col-md-4 text-center h-100">
+            <div class="service-box p-3 mb-4">
+                <img src="{{ asset('crecer-contigo/servicio-2.jpg') }}" style="width: 80px; height: 80px; border-radius: 50%;">
+                <h6 class="title mt-3">Acompañamiento Psicológico</h6>
+                <p>Asesoramiento psicológico para bienestar mental.</p>
             </div>
         </div>
-        <div class="col-md-3 text-center">
-            <img src="{{asset('crecer-contigo/servicio-3.jpg')}}" style="width: 80px; height: 80px; border-radius: 50%;">
-            <div class="d-flex justify-content-center align-items-center">
-                <div class="col-12 px-1 py-2">
-                    <div class="text-center">
-                        <h6 class="title text-dark">Formación a docente</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 text-center">
-            <img src="{{asset('crecer-contigo/servicio-4.jpg')}}" style="width: 80px; height: 80px; border-radius: 50%;">
-            <div class="d-flex justify-content-center align-items-center">
-                <div class="col-12 px-1 py-2">
-                    <div class="text-center">
-                        <h6 class="title text-dark">Escuela de padres</h6>
-                    </div>
-                </div>
+        <!-- Tercer servicio -->
+        <div class="col-md-4 text-center h-100">
+            <div class="service-box p-3 mb-4">
+                <img src="{{ asset('crecer-contigo/servicio-3.jpg') }}" style="width: 80px; height: 80px; border-radius: 50%;">
+                <h6 class="title mt-3">Formación a docente</h6>
+                <p>Capacitación para docentes en salud mental y bienestar escolar.</p>
             </div>
         </div>
     </div>
-    <div class="d-flex justify-content-center align-items-center">
-        <div class="col-md-3 text-center">
-            <img src="{{asset('crecer-contigo/servicio-5.1.png')}}" style="width: 80px; height: 80px; border-radius: 50%;">
-            <div class="d-flex justify-content-center align-items-center">
-                <div class="col-12 px-1 py-2">
-                    <div class="text-center">
-                        <h6 class="title text-dark">Inteligencia emocional</h6>
-                    </div>
-                </div>
+
+    <div class="row">
+        <!-- Cuarto servicio -->
+        <div class="col-md-4 text-center h-100">
+            <div class="service-box p-3 mb-4">
+                <img src="{{ asset('crecer-contigo/servicio-4.jpg') }}" style="width: 80px; height: 80px; border-radius: 50%;">
+                <h6 class="title mt-3">Escuela de padres</h6>
+                <p>Orientación para padres en el desarrollo de sus hijos.</p>
             </div>
         </div>
-        <div class="col-md-3 text-center">
-            <img src="{{asset('crecer-contigo/servicio-6.jpg')}}" style="width: 80px; height: 80px; border-radius: 50%;">
-            <div class="d-flex justify-content-center align-items-center">
-                <div class="col-12 px-1 py-2">
-                    <div class="text-center">
-                        <h6 class="title text-dark">Orientación vocacional</h6>
-                    </div>
-                </div>
+        <!-- Quinto servicio -->
+        <div class="col-md-4 text-center h-100">
+            <div class="service-box p-3 mb-4">
+                <img src="{{ asset('crecer-contigo/servicio-5.1.png') }}" style="width: 80px; height: 80px; border-radius: 50%;">
+                <h6 class="title mt-3">Inteligencia emocional</h6>
+                <p>Programas para mejorar la inteligencia emocional.</p>
             </div>
         </div>
-        <div class="col-md-3 text-center">
-            <img src="{{asset('crecer-contigo/servicio-7.1.jpg')}}" style="width: 80px; height: 80px; border-radius: 50%;">
-            <div class="d-flex justify-content-center align-items-center">
-                <div class="col-12 px-1 py-2">
-                    <div class="text-center">
-                        <h6 class="title text-dark">Fonoaudiología</h6>
-                    </div>
-                </div>
+        <!-- Sexto servicio -->
+        <div class="col-md-4 text-center h-100">
+            <div class="service-box p-3 mb-4">
+                <img src="{{ asset('crecer-contigo/servicio-6.jpg') }}" style="width: 80px; height: 80px; border-radius: 50%;">
+                <h6 class="title mt-3">Orientación vocacional</h6>
+                <p>Asesoría en la toma de decisiones sobre el futuro profesional.</p>
             </div>
         </div>
-        <div class="col-md-3 text-center">
-            <img src="{{asset('crecer-contigo/servicio-8.png')}}" style="width: 80px; height: 80px; border-radius: 50%;">
-            <div class="d-flex justify-content-center align-items-center">
-                <div class="col-12 px-1 py-2">
-                    <div class="text-center">
-                        <h6 class="title text-dark">Terapia ocupacional</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 text-center">
-            <img src="{{asset('crecer-contigo/servicio-9.jpeg')}}" style="width: 80px; height: 80px; border-radius: 50%;">
-            <div class="row h-100 d-flex justify-content-center align-items-center">
-                <div class="col-12 px-1 py-2">
-                    <div class="text-center">
-                        <h6 class="title text-dark">Acompañamiento psicológico externo</h6>
-                    </div>
-                </div>
-            </div>
+    </div>
+
+    <!-- Botón para ver más servicios -->
+    <div class="row text-center mt-4">
+        <div class="col-md-12">
+            <a href="{{ route('services.index') }}" class="btn btn-new btn-lg px-4">Ver más servicios</a>
         </div>
     </div>
 </div>
-
-

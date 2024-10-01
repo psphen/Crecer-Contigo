@@ -14,14 +14,8 @@ class UserSeeder extends Seeder
         User::create([
             'name'=>'Admin',
 //            'slug'=>\Illuminate\Support\Str::slug('name'),
-            'email'=>'superadmin@agro.com',
-            'password'=>bcrypt('123456789')
+            'email'=>'adminlicontigo@gmail.com',
+            'password'=>bcrypt('AdCrecer23*')
         ])->assignRole('SuperAdmin');
-        User::create([
-            'name'=>'Vendor',
-//            'slug'=>\Illuminate\Support\Str::slug('name'),
-            'email'=>'vendor@agro.com',
-            'password'=>bcrypt('123456789')
-        ])->assignRole('Vendor');
     }
 }

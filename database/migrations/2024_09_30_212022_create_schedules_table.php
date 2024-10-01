@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateServicesTable extends Migration
+class CreateSchedulesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreateServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('schedules', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name');
-            $table->string('description')->nullable();
-            $table->decimal('costo', 10, 2);
-            $table->integer('sections');
-            $table->boolean('is_active');
+            $table->unsignedBigInteger('user_id');
+            $table->date('day');
+            $table->time('start_hour');
+            $table->time('end_hour');
+
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();
         });
@@ -33,6 +34,6 @@ class CreateServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('schedules');
     }
 }

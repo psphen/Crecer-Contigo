@@ -5,7 +5,8 @@
     @include('frontend.partials.profile')
     @include('frontend.partials.service')
     @include('frontend.partials.testimonials')
-    @include('frontend.partials.contact')
+    @livewire('frontend.contact');
+    {{--@include('frontend.partials.contact')--}}
     {{--@include('frontend.partials.about-me')--}}
     {{--@include('frontend.partials.line')--}}
 @endsection

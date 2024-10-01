@@ -6,13 +6,13 @@
         <div class="footer-contact">
             <p class="mb-0">
                 <div class="d-flex align-items-center mb-2">
-                    <i class="fa-solid fa-location-dot me-2" style="font-size: 20px;"></i>Sierra Nevada<br>
+                    <i class="fa-solid fa-location-dot me-2" style="font-size: 20px;"></i>Calle 47 -15 -45 buque<br>
                 </div>
                 <div class="d-flex align-items-center mb-2">
-                    <i class="fa-solid fa-phone me-2" style="font-size: 20px;"></i>3104853233<br>
+                    <i class="fa-solid fa-phone me-2" style="font-size: 20px;"></i>3213467986<br>
                 </div>
                 <div class="d-flex align-items-center mb-2">
-                    <i class="fa-solid fa-envelope me-2" style="font-size: 20px;"></i>correo@.com
+                    <i class="fa-solid fa-envelope me-2" style="font-size: 20px;"></i>Crecercontigovillavo@gamil.com
                 </div>
             </p>
         </div>

@@ -20,6 +20,12 @@
                 <div >{{__('Home')}}</div>
             </a>
         </li>
+        <li class="menu-item {{Route::is('contact.index')?'active':''}}">
+            <a href="{{route('contact.index')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-article"></i>
+                <div >{{__('Contacts')}}</div>
+            </a>
+        </li>
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">{{__('Location')}}</span>
         </li>

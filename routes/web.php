@@ -77,6 +77,13 @@ Route::group(['middleware'=>'auth'],function (){
         Route::group(['prefix'=>'settings'],function (){
             Route::get('/', 'SettingController@index')->name('settings.index');
         });
+        //Clients
+        Route::group(['prefix' => 'client'], function (){
+            Route::get('/', 'ClientController@index')->name('client.index');
+        });
+        Route::group(['prefix' => 'contacts'], function (){
+            Route::get('/', 'ContactController@index')->name('contact.index');
+        });
     });
     Route::get('/profile/{profile_slug}/{profile_id}','FrontendController@profile')->name('profile');
 });

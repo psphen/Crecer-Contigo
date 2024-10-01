@@ -22,7 +22,7 @@
             <a href="https://www.facebook.com" class="nav-link">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com" class="nav-link">
+            <a href="https://www.instagram.com/psiccrecercontigo/" class="nav-link" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>

@@ -1,5 +1,12 @@
 <?php
 
+use App\Http\Controllers\CityController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SettingController;
+use App\Http\Controllers\StateController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,32 +29,32 @@ Route::group(['middleware'=>'auth'],function (){
         //Dashboard
         Route::get('/', 'HomeController@index')->name('dashboard');
         //Users
-        Route::group(['prefix'=>'users'],function (){
-            Route::get('/', 'UserController@index')->name('users.index');
+        Route::group(['prefix' => 'users'],function (){
+            Route::get('/', [UserController::class, 'index'])->name('users.index');
         });
         //Cities
         Route::group(['prefix'=>'states'],function (){
-            Route::get('/', 'StateController@index')->name('states.index');
+            Route::get('/', [StateController::class, 'index'])->name('states.index');
         });
         //Cities
         Route::group(['prefix'=>'cities'],function (){
-            Route::get('/', 'CityController@index')->name('cities.index');
+            Route::get('/', [CityController::class, 'index'])->name('cities.index');
         });
         //Services
         Route::group(['prefix'=>'services'],function (){
-            Route::get('/', 'ServiceController@index')->name('services.index');
+            Route::get('/', [ServiceController::class, 'index'])->name('services.index');
         });
         //settings
         Route::group(['prefix'=>'settings'],function (){
-            Route::get('/', 'SettingController@index')->name('settings.index');
+            Route::get('/', [SettingController::class, 'index'])->name('settings.index');
         });
         //Clients
         Route::group(['prefix' => 'client'], function (){
-            Route::get('/', 'ClientController@index')->name('client.index');
+            Route::get('/', [ClientController::class, 'index'])->name('client.index');
         });
         //Contacts
         Route::group(['prefix' => 'contacts'], function (){
-            Route::get('/', 'ContactController@index')->name('contact.index');
+            Route::get('/', [ContactController::class, 'index'])->name('contact.index');
         });
     });
     Route::get('/profile/{profile_slug}/{profile_id}','FrontendController@profile')->name('profile');

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Settings;
+namespace App\Livewire\Settings;
 
 use App\Models\Setting;
 use Illuminate\Support\Facades\File;

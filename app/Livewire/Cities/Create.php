@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Cities;
+namespace App\Livewire\Cities;
 
 use App\Models\City;
 use App\Models\Currency;
@@ -110,13 +110,14 @@ class Create extends Component
             'is_active'
         ]);
     }
-    public function mount(){
+    public function mount()
+    {
         $this->states = State::where('is_active',true)->get();
-        $this->currencies = Currency::where('is_active',true)->get();
         $this->languages = Language::where('is_active',true)->get();
         $this->months = Month::all();
     }
-    public function save(){
+    public function save()
+    {
         $this->validate();
         $thumbnail=null;
         $banner = null;

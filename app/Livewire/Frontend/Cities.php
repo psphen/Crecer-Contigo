@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Frontend;
+namespace App\Livewire\Frontend;
 
 use Livewire\Component;
 class Cities extends Component

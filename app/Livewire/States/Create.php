@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\States;
+namespace App\Livewire\States;
 
 use Livewire\Component;
 

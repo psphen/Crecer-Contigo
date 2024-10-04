@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Cities;
+namespace App\Livewire\Cities;
 
 use App\Models\City;
 use App\Models\Currency;

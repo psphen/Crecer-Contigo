@@ -11,19 +11,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         $this->call(
-             [
-                 CountrySeeder::class,
-                 StateSeeder::class,
-                 CurrencySeeder::class,
-                 LanguageSeeder::class,
-                 MonthSeeder::class,
-                 CitySeeder::class,
-                 RoleSeeder::class,
-                 UserSeeder::class,
-                 WeekDaySeeder::class,
-                 SettingSeeder::class
-             ]
-            );
+        $this->call(
+            [
+                CountrySeeder::class,
+                StateSeeder::class,
+                LanguageSeeder::class,
+                MonthSeeder::class,
+                RoleSeeder::class,
+                UserSeeder::class,
+                WeekDaySeeder::class,
+                SettingSeeder::class
+            ]
+        );
     }
 }

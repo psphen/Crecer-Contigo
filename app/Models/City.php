@@ -16,10 +16,8 @@ class City extends Model
             $city->slug = Str::slug($city->name);
         });
     }
-    public function state(){
+    public function state()
+    {
         return $this->belongsTo(State::class);
-    }
-    public function places(){
-        return $this->hasMany(Place::class);
     }
 }

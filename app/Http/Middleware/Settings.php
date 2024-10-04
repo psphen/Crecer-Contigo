@@ -26,17 +26,6 @@ class Settings
 
         $app_name = Setting::where('name', 'app_name')->value('val');
         $subtitle = Setting::where('name', 'subtitle')->value('val');
-        $app_cities = City::where('is_active',true)->whereHas('places.posts')->withCount(['places', 'places as post_count' => function ($query) {
-            $query->whereHas('posts');
-        }])->get();
-        $footer_cities = City::where('is_active', true)
-            ->whereHas('places.posts')
-            ->withCount(['places', 'places as post_count' => function ($query) {
-                $query->whereHas('posts');
-            }])
-            ->inRandomOrder()
-            ->limit(5)
-            ->get();
         $api_google_maps = Setting::where('name', 'google_map_api_key')->value('val');
 
         view()->share('favicon', $favicon);
@@ -49,8 +38,6 @@ class Settings
         view()->share('app_name', $app_name);
         view()->share('subtitle', $subtitle);
 
-        view()->share('app_cities', $app_cities);
-        view()->share('footer_cities', $footer_cities);
         view()->share('api_google_maps', $api_google_maps);
 
 

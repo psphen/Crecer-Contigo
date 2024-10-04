@@ -90,9 +90,7 @@
 </head>
 <body>
     <div id="main-content">
-        {{--@include('frontend.layouts.topbar')--}}
         @include('frontend.layouts.nav')
-        {{--@include('frontend.layouts.preloader')--}}
         <div style="min-height: 100vh;">
             @yield('content')
         </div>

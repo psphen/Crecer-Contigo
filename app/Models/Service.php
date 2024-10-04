@@ -7,11 +7,5 @@ use Illuminate\Support\Str;
 
 class Service extends Model
 {
-    protected static function boot()
-    {
-        parent::boot();
-        static::creating(function ($service) {
-            $service->slug = Str::slug($service->name);
-        });
-    }
+    protected $fillable = ['name', 'description', 'costo', 'sections', 'is_active'];
 }

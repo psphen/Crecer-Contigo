@@ -61,6 +61,9 @@
                     <thead class="border-top">
                     <tr>
                         <th class="text-center">{{__('Name')}}</th>
+                        <th class="text-center">{{__('Description')}}</th>
+                        <th class="text-center">{{__('Costo')}}</th>
+                        <th class="text-center">{{__('Sections')}}</th>
                         <th class="text-center">{{__('Actions')}}</th>
                     </tr>
                     </thead>
@@ -68,6 +71,9 @@
                     @forelse($services as $service)
                         <tr>
                             <td class="text-center">{{$service->name}}</td>
+                            <td class="text-center">{{$service->description}}</td>
+                            <td class="text-center">{{$service->costo}}</td>
+                            <td class="text-center">{{$service->sections}}</td>
                             <td class="text-center">
                                 <div class="d-inline-block text-nowrap">
                                     <button class="btn btn-sm btn-icon edit-record" data-bs-toggle="modal" data-bs-target="#edit" wire:click="edit({{$service}})"><i class="ti ti-edit"></i></button>

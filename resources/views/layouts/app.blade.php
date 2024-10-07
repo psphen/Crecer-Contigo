@@ -24,6 +24,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/new.css') }}" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="{{asset('uploads/settings/'.$favicon)}}"/>
 
     <!-- Fonts -->

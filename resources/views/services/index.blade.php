@@ -2,8 +2,8 @@
 @section('title', __('Services'))
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-       @livewire('services.create')
-        @livewire('services.show')
+        @livewire('service.create')
+        @livewire('service.show')
     </div>
 @endsection
  

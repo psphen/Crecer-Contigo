@@ -17,10 +17,11 @@ class CreateServicesTable extends Migration
             $table->id();
 
             $table->string('name');
-            $table->string('description')->nullable();
-            $table->decimal('costo', 10, 2);
+            $table->string('image')->nullable();
+            $table->text('description')->nullable();
+            $table->decimal('price', 8, 2);
             $table->integer('sections');
-            $table->boolean('is_active');
+            $table->boolean('is_active')->default(true);
 
             $table->timestamps();
         });

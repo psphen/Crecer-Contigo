@@ -7,5 +7,12 @@ use Illuminate\Support\Str;
 
 class Service extends Model
 {
-    protected $fillable = ['name', 'description', 'costo', 'sections', 'is_active'];
+    protected $fillable = [
+        'name', 
+        'image', 
+        'description', 
+        'price',
+        'sections',
+        'is_active'
+    ];
 }

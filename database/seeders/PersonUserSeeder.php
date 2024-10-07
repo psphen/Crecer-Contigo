@@ -1,8 +1,10 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 
-class ServiceSeeder extends Seeder
+class PersonUserSeeder extends Seeder
 {
     /**
      * Run the database seeds.

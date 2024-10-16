@@ -10,8 +10,8 @@
                 <li class="nav-item {{Route::is('frontend.index') ? 'active' : ''}}">
                     <a href="{{route('frontend.index')}}" class="nav-link">Inicio</a>
                 </li>
-                <li class="nav-item {{Route::is('services.index') ? 'active' : ''}} mx-5">
-                    <a href="{{route('services.index')}}" class="nav-link">Servicios</a>
+                <li class="nav-item {{Route::is('frontend.service') ? 'active' : ''}} mx-5">
+                    <a href="{{route('frontend.service')}}" class="nav-link">Servicios</a>
                 </li>
                 <li class="nav-item {{Route::is('about.index') ? 'active' : ''}}">
                     <a href="{{route('about.index')}}" class="nav-link">Nosotros</a>

@@ -81,109 +81,109 @@
     @livewireStyles
 </head>
 <body>
-<div class="layout-wrapper layout-content-navbar">
-    <div class="layout-container">
-        @include('layouts.sidebar')
-        <!-- Layout container -->
-        <div class="layout-page">
-            @include('layouts.nav')
-            <div class="content-wrapper">
-                @yield('content')
-{{--                @include('layouts.footer')--}}
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+            @include('layouts.sidebar')
+            <!-- Layout container -->
+            <div class="layout-page">
+                @include('layouts.nav')
+                <div class="content-wrapper">
+                    @yield('content')
+    {{--                @include('layouts.footer')--}}
+                </div>
             </div>
         </div>
+        <div class="layout-overlay layout-menu-toggle"></div>
+        <div class="drag-target"></div>
     </div>
-    <div class="layout-overlay layout-menu-toggle"></div>
-    <div class="drag-target"></div>
-</div>
 @livewireScripts
-<script>
-    //Hecho
+    <script>
+        //Hecho
+        Livewire.on('alert', function (message, modal) {
+            Swal.fire(
+                {
+                    title: 'Hecho!',
+                    text: message,
+                    icon: 'success',
+                    showCancelButton: false,
+                }
+            );
 
-    Livewire.on('alert', function (message, modal) {
-        Swal.fire(
-            {
-                title: 'Hecho!',
-                text: message,
-                icon: 'success',
-                showCancelButton: false,
-            }
-        );
+            $(modal).modal('hide');//hide/show
+        });
+        
+        //Seguro?
+        Livewire.on('deleteDevice', deviceId => {
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'btn btn-success',
+                    cancelButton: 'btn btn-danger'
+                },
+                buttonsStyling: false
+            })
 
-        $(modal).modal('hide');//hide/show
-    });
-    //Seguro?
-    Livewire.on('deleteDevice', deviceId => {
-        const swalWithBootstrapButtons = Swal.mixin({
-            customClass: {
-                confirmButton: 'btn btn-success',
-                cancelButton: 'btn btn-danger'
-            },
-            buttonsStyling: false
-        })
+            swalWithBootstrapButtons.fire({
+                title: 'Esta seguro?',
+                text: "Este cambio no podra revertirse!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Si, eliminar!',
+                cancelButtonText: 'No, cancelar!',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Livewire.emitTo('show-devices', 'delete', deviceId)
+                    swalWithBootstrapButtons.fire(
+                        'Eliminado!',
+                        'El elemento seleccionado ha sido eliminado.',
+                        'success'
+                    )
+                } else if (
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    swalWithBootstrapButtons.fire(
+                        'Cancelado',
+                        'No se aplicaran los cambios',
+                        'error'
+                    )
+                }
+            })
+        });
+    </script>
+    <script src="{{asset('assets/vendor/libs/jquery/jquery.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/popper/popper.js')}}"></script>
 
-        swalWithBootstrapButtons.fire({
-            title: 'Esta seguro?',
-            text: "Este cambio no podra revertirse!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'Si, eliminar!',
-            cancelButtonText: 'No, cancelar!',
-            reverseButtons: true
-        }).then((result) => {
-            if (result.isConfirmed) {
-                Livewire.emitTo('show-devices', 'delete', deviceId)
-                swalWithBootstrapButtons.fire(
-                    'Eliminado!',
-                    'El elemento seleccionado ha sido eliminado.',
-                    'success'
-                )
-            } else if (
-                result.dismiss === Swal.DismissReason.cancel
-            ) {
-                swalWithBootstrapButtons.fire(
-                    'Cancelado',
-                    'No se aplicaran los cambios',
-                    'error'
-                )
-            }
-        })
-    });
-</script>
-<script src="{{asset('assets/vendor/libs/jquery/jquery.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/popper/popper.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/node-waves/node-waves.js')}}"></script>
 
-<script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/node-waves/node-waves.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/hammer/hammer.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/i18n/i18n.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/typeahead-js/typeahead.js')}}"></script>
 
-<script src="{{asset('assets/vendor/libs/hammer/hammer.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/i18n/i18n.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/typeahead-js/typeahead.js')}}"></script>
+    <script src="{{asset('assets/vendor/js/menu.js')}}"></script>
+    <!-- endbuild -->
 
-<script src="{{asset('assets/vendor/js/menu.js')}}"></script>
-<!-- endbuild -->
+    <!-- Vendors JS -->
+    <script src="{{asset('assets/vendor/libs/apex-charts/apexcharts.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/swiper/swiper.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js')}}"></script>
 
-<!-- Vendors JS -->
-<script src="{{asset('assets/vendor/libs/apex-charts/apexcharts.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/swiper/swiper.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js')}}"></script>
+    <!-- Main JS -->
+    <script src="{{asset('assets/js/main.js')}}"></script>
+    <script src="{{asset('assets/vendor/js/bootstrap.js')}}"></script>
 
-<!-- Main JS -->
-<script src="{{asset('assets/js/main.js')}}"></script>
-<script src="{{asset('assets/vendor/js/bootstrap.js')}}"></script>
-
-<!-- Page JS -->
-<script src="{{asset('assets/js/dashboards-analytics.js')}}"></script>
-<!-- Vendor Scripts -->
-<script src="{{asset('assets/vendor/libs/moment/moment.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/select2/select2.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/cleavejs/cleave.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/cleavejs/cleave-phone.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/sweetalert2/sweetalert2.js')}}"></script>
+    <!-- Page JS -->
+    <script src="{{asset('assets/js/dashboards-analytics.js')}}"></script>
+    <!-- Vendor Scripts -->
+    <script src="{{asset('assets/vendor/libs/moment/moment.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/select2/select2.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/cleavejs/cleave.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/cleavejs/cleave-phone.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/sweetalert2/sweetalert2.js')}}"></script>
 
 </body>
 </html>

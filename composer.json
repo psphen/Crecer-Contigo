@@ -27,7 +27,7 @@
         "laravel/ui": "^4.2",
         "laravelcollective/html": "^6.4",
         "league/flysystem-aws-s3-v3": "^3.0",
-        "livewire/livewire": "^3.5",
+        "livewire/livewire": "^3.0",
         "maatwebsite/excel": "^3.1",
         "macsidigital/laravel-zoom": "^7.0",
         "mariuzzo/laravel-js-localization": "^1.10",

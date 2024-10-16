@@ -26,6 +26,12 @@
                 <div >{{__('Contacts')}}</div>
             </a>
         </li>
+        <li class="menu-item {{Route::is('psychologist.index')?'active':''}}">
+            <a href="{{route('psychologist.index')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-article"></i>
+                <div >{{__('Psychologists')}}</div>
+            </a>
+        </li>
         <li class="menu-item {{Route::is('services.*')?'active':''}}">
             <a href="{{route('services.index')}}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-article"></i>

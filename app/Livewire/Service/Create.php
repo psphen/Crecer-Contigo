@@ -3,15 +3,17 @@
 namespace App\Livewire\Service;
 
 use App\Models\Service;
-use Livewire\WithFileUploads;
 use Illuminate\Support\Str;
 use Illuminate\Support\Carbon;
 use Image;
+use Livewire\Attributes\Validate;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class Create extends Component
 {
     use WithFileUploads;
+
     //Create
     public $name;
     public $image;
@@ -25,7 +27,8 @@ class Create extends Component
     public $image_height = 200;
 
     protected $listeners = [
-        'ServicesCreateChange'
+        'ServicesCreateChange',
+        'ServicesCreateRender' => 'render'
     ];
     public function hydrate()
     {
@@ -39,9 +42,8 @@ class Create extends Component
     {
         $rules = [
             'name' => 'required|string|max:255',
-            'image' => 'required|image|max:1024',
-            'description' => 'required|string',
-            'price' => 'required|numeric|min:0',
+            'image' => 'nullable|image|max:1024',
+            'price' => 'required|numeric|digits_between:0,8',
             'sections' => 'required|integer|min:1',
             'is_active' => 'required|boolean'
         ];
@@ -49,7 +51,9 @@ class Create extends Component
         return $rules;
     }
     protected $messages = [
-        'name.required'=>'Name is required',
+        'image.image' => 'The image must be an image.',
+        'image.max' => 'The photo may not be greater than :max kilobytes.',
+        'price.digits_between' => 'Price must be between :min and :max',
     ];
     public  function closeAndClean()
     {
@@ -93,11 +97,11 @@ class Create extends Component
         $service->price = $this->price;
         $service->sections = $this->sections;
         $service->is_active = $this->is_active;
-        dd($service);
+        // dd($service);
         $service->save();
 
-        $this->dispatchTo('services.show','render');
-        $this->dispatch('alert',__('Registered Service!'),'#create');
+        $this->dispatch('services.show','render');
+        $this->dispatch('alert', __('Registered Alert!'), '#create');
         $this->dispatch('ServicesShowRender');
         $this->closeAndClean();
     }

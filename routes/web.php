@@ -3,11 +3,14 @@
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\PsychologistController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\StateController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use Livewire\Mechanisms\FrontendAssets\FrontendAssets;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,9 +59,15 @@ Route::group(['middleware'=>'auth'],function (){
         Route::group(['prefix' => 'contacts'], function (){
             Route::get('/', [ContactController::class, 'index'])->name('contact.index');
         });
+        //Psychologists
+        Route::group(['prefix' => 'psychologists'], function (){
+            Route::get('/', [PsychologistController::class, 'index'])->name('psychologist.index');
+        });
     });
     Route::get('/profile/{profile_slug}/{profile_id}','FrontendController@profile')->name('profile');
 });
-Route::get('/','FrontendController@index')->name('frontend.index');
-Route::get('/about-us','FrontendController@about')->name('about.index');
+Route::get('/', [FrontendController::class, 'index'])->name('frontend.index');
+Route::get('/services', [FrontendController::class, 'services'])->name('frontend.service');
+Route::get('/services/{id}', [FrontendController::class, 'servicesDetail'])->name('frontend.service.details');
+Route::get('/about-us', [FrontendController::class, 'about'])->name('about.index');
 

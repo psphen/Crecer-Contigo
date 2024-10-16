@@ -6,9 +6,7 @@
             </div>
         </div>
     </div>
-
     <div class="row">
-        <!-- Primer servicio -->
         <div class="col-md-4 text-center h-100">
             <div class="service-box p-3 mb-4">
                 <img src="{{ asset('crecer-contigo/servicio-1.jpg') }}" style="width: 80px; height: 80px; border-radius: 50%;">
@@ -16,7 +14,6 @@
                 <p>Puedes acceder a este servicio para mejorar la convivencia escolar.</p>
             </div>
         </div>
-        <!-- Segundo servicio -->
         <div class="col-md-4 text-center h-100">
             <div class="service-box p-3 mb-4">
                 <img src="{{ asset('crecer-contigo/servicio-2.jpg') }}" style="width: 80px; height: 80px; border-radius: 50%;">
@@ -24,7 +21,6 @@
                 <p>Asesoramiento psicológico para bienestar mental.</p>
             </div>
         </div>
-        <!-- Tercer servicio -->
         <div class="col-md-4 text-center h-100">
             <div class="service-box p-3 mb-4">
                 <img src="{{ asset('crecer-contigo/servicio-3.jpg') }}" style="width: 80px; height: 80px; border-radius: 50%;">
@@ -33,9 +29,7 @@
             </div>
         </div>
     </div>
-
     <div class="row">
-        <!-- Cuarto servicio -->
         <div class="col-md-4 text-center h-100">
             <div class="service-box p-3 mb-4">
                 <img src="{{ asset('crecer-contigo/servicio-4.jpg') }}" style="width: 80px; height: 80px; border-radius: 50%;">
@@ -43,7 +37,6 @@
                 <p>Orientación para padres en el desarrollo de sus hijos.</p>
             </div>
         </div>
-        <!-- Quinto servicio -->
         <div class="col-md-4 text-center h-100">
             <div class="service-box p-3 mb-4">
                 <img src="{{ asset('crecer-contigo/servicio-5.1.png') }}" style="width: 80px; height: 80px; border-radius: 50%;">
@@ -51,7 +44,6 @@
                 <p>Programas para mejorar la inteligencia emocional.</p>
             </div>
         </div>
-        <!-- Sexto servicio -->
         <div class="col-md-4 text-center h-100">
             <div class="service-box p-3 mb-4">
                 <img src="{{ asset('crecer-contigo/servicio-6.jpg') }}" style="width: 80px; height: 80px; border-radius: 50%;">
@@ -60,8 +52,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Botón para ver más servicios -->
     <div class="row text-center mt-4">
         <div class="col-md-12">
             <a href="{{ route('services.index') }}" class="btn btn-new btn-lg px-4">Ver más servicios</a>

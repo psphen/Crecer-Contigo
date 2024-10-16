@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -45,6 +46,16 @@ class FrontendController extends Controller
     public function category()
     {
         return view('frontend.categories.show');
+    }
+    public function services()
+    {
+        return view('frontend.services.index');
+    }
+    public function servicesDetail($id)
+    {
+        $service = Service::find($id);
+        
+        return view('frontend.services.details', compact('service'));
     }
 
 }

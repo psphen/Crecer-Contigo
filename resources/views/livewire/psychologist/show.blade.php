@@ -91,16 +91,16 @@
                         </tbody>
                     </table>
                     @if ($readyToLoad)
-                        @if($psychologist->total()!=0)
+                        @if($psychologists->total()!=0)
                             <div class="row mx-2 my-3">
                                 <div class="col-md-5">
                                     <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">
-                                        {{__('Showing')}} {{ $psychologist->firstItem() }} {{__('to')}} {{ $psychologist->lastItem() }} {{__('of')}} {{ $psychologist->total() }} {{__('results')}}
+                                        {{__('Showing')}} {{ $psychologists->firstItem() }} {{__('to')}} {{ $psychologists->lastItem() }} {{__('of')}} {{ $psychologists->total() }} {{__('results')}}
                                     </div>
                                 </div>
                                 <div class="col-md-7 d-flex justify-content-end">
-                                    @if ($psychologist->hasPages())
-                                        {{$psychologist->links('vendor.livewire.bootstrap')}}
+                                    @if ($psychologists->hasPages())
+                                        {{$psychologists->links('vendor.livewire.bootstrap')}}
                                     @endif
                                 </div>
                             </div>

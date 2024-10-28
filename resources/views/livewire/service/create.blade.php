@@ -70,6 +70,19 @@
                                 <div class="badge bg-label-danger mt-2 w-100">{{ __($message) }}</div>
                             @enderror
                         </div>
+                        <div class="col-md-6">
+                            <label for="psychologist_id">Seleccionar Psicólogo:</label>
+                            <select name="psychologist_id" id="psychologist_id" class="form-select" wire:model="psychologist_id" wire:change="loadPsychologistWorkDays">
+                                <option value="">Seleccione</option>
+                                @foreach($psychologists as $psychologist)
+                                    <option value="{{ $psychologist->id }}">{{ $psychologist->person->full_name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="date_psychologist">Fecha de la cita:</label>
+                            <input type="date" id="date_psychologist" class="form-control" wire:model="date_psychologist">
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -109,6 +122,25 @@
                 });
 
                 livewire.emit('ServicesCreateChange', '', '');
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('livewire:load', function () {
+            Livewire.on('setAllowedDays', (workDays) => {
+                const allowedDays = workDays;
+                const dateInput = document.getElementById('date_psychologist');
+
+                dateInput.addEventListener('input', function () {
+                    const selectedDate = new Date(this.value);
+                    const dayOfWeek = selectedDate.toLocaleDateString('en-us', { weekday: 'long' }).toLowerCase();
+
+                    // Verifica si el día seleccionado está permitido
+                    if (!allowedDays.includes(dayOfWeek)) {
+                        alert("Este día no está disponible para el psicólogo seleccionado.");
+                        this.value = ''; // Limpia el campo de fecha si el día no es permitido
+                    }
+                });
             });
         });
     </script>

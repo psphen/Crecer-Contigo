@@ -22,10 +22,10 @@ class CreatePersonUsersTable extends Migration
             $table->string('last_name');
             $table->string('second_last_name')->nullable();
             $table->text('photo')->nullable();
-            $table->integer('phone');
+            $table->string('phone');
             $table->unsignedBigInteger('gender_id')->nullable();
             $table->date('dob')->nullable();
-            $table->integer('dni');
+            $table->string('dni');
             $table->unsignedBigInteger('state_id')->nullable();
             $table->unsignedBigInteger('city_id')->nullable();
             

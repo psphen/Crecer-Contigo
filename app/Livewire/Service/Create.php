@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Service;
 
+use App\Models\Psychologist;
 use App\Models\Service;
 use Illuminate\Support\Str;
 use Illuminate\Support\Carbon;
@@ -26,6 +27,11 @@ class Create extends Component
     public $image_width = 200;
     public $image_height = 200;
 
+    public $psychologists;
+    public $psychologist_id;
+    public $availableDays = [];
+    public $workDays = [];
+
     protected $listeners = [
         'ServicesCreateChange',
         'ServicesCreateRender' => 'render'
@@ -49,6 +55,17 @@ class Create extends Component
         ];
 
         return $rules;
+    }
+    public function mount()
+    {
+        $this->psychologists = Psychologist::all();
+    }
+    public function loadPsychologistWorkDays()
+    {
+        $psychologist = Psychologist::find($this->psychologist_id);
+        $this->workDays = $psychologist ? json_decode($psychologist->work_days) : [];
+    
+        $this->dispatch('setAllowedDays', $this->workDays);
     }
     protected $messages = [
         'image.image' => 'The image must be an image.',
